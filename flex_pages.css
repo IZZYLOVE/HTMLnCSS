@@ -27,9 +27,9 @@
     align-items: center;
 }
 
-#menu{
+/* #menu{
     display: none;
-}
+} */
 
 #menu2{
     display: none;
@@ -150,7 +150,7 @@
     }
 
  
-    #menu{
+    #menu2, #menu{
         max-width: 400px;
         min-width: 100px;
         display: inline-flex;
@@ -163,12 +163,15 @@
         top: 0;
     } 
 
-    #menu li{
+    #menu2 li, #menu li{
         margin: 10px auto;
         width:fit-content;
         list-style: none;
     }
 
+    #menu2 li a, #menu li a{
+        width:auto;
+    }
  
 
     /* .header li{

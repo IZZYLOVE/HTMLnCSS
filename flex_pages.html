@@ -21,12 +21,12 @@
                 </button>
             </div>
 
-            <ul id="menu" class="menu">
+            <!-- <ul id="menu" class="menu">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </ul>
+            </ul> -->
 
             <ul id="menu2" class="menu2">
                 <li><a class="active" href="index.html">Home</a></li>
@@ -148,21 +148,28 @@
             // keep in mind that this approach directly modifies the style attribute
             console.log('click')
 
-            if (menu.style.display === 'block') {
-                console.log('display none')
+       // Get the width of the browser window
+       var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-                menu.style.display = 'none'
-            } 
-            // else if() {
-            //     console.log('display lex')
+        // Log the screen width to the console
+        console.log("Screen Width: " + screenWidth + " pixels");
 
-            //     menu.style.display = 'flex'
-            // }
-            else {
-                console.log('display block')
 
-                menu.style.display = 'block'
-            }
+        if (menu.style.display === 'block' && screenWidth < 600) {
+            console.log('display none')
+
+            menu.style.display = 'none'
+        }
+
+        if (menu.style.display === 'none' && screenWidth < 600) {
+            console.log('display block')
+
+            menu.style.display = 'block'
+        }
+        else {
+            console.log('display inline-flex')
+            menu.style.display = 'inline-flex'
+        }
         })
 
         function hidemobilemenu (){
@@ -170,6 +177,22 @@
                 console.log('display none')
                 menu.style.display = 'none'
             } 
+
+            // Get the width of the browser window
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            // Log the screen width to the console
+            console.log("Screen Width: " + screenWidth + " pixels");
+
+            if(screenWidth >= 600) {
+                console.log('display >= 600, display is inline-flex')
+
+                menu.style.display = 'inline-flex'
+            }
+            else if(screenWidth < 600) {
+                console.log('display < 600, display is none')
+                menu.style.display = 'none'
+            }
         }
     </script>
 </body>
