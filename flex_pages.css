@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAV BAR */
+.header{
+
+    background: rgba(24, 6, 97, 0.812)
+}
+
+.logo, .menu_icon{
+    width: 50px;
+    aspect-ratio: 1;
+    /* height: 50px; */
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+.header nav{
+    display: flex;
+    background: #234C64;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu{
+    display: none;
+}
+
+#menu2{
+    display: none;
+    max-width: 300px;
+    min-width: 100px;
+    width: 100%;
+    position: absolute;
+    background-color: #234C64;
+    right: 0;
+    top: 70px;
+    border-radius: 5px;
+}
+
+
+
+.header li{
+    margin: 10px auto;
+    width: 90%;
+    list-style: none;
+}
+
+
+.header li a{
+    display: block;
+    width:100%;
+    color: white;
+    text-decoration: none;
+    background: rgb(183, 133, 86);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.header li a:hover, .header li .active{
+    background-color: antiquewhite;
+    color: black;    
+}
+
+.logo:hover, .menu_icon:hover{
+    border: 1px solid antiquewhite;
+}
+
+/* SEARCH BAR */
+.container{
+    display: inline-flex;
+    /* display: flex; */
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    /* width: 100%; */
+    /* flex: 1 1 300px; */
+
+    border-radius: 10px;
+    border: 1px solid blue;
+    overflow: hidden;
+    max-width: 700px;
+    height: 50px;
+}
+
+.icon{
+    padding: .2rem;
+}
+
+.searchBox{
+    border: 0;
+    /* flex-grow: 1; */
+    /* flex: 1; */
+    width: 100%;
+    
+    
+    padding: .8rem;
+}
+
+.searchButton{
+    color: white;
+    background-color:white;
+    border: 0;
+    padding: 3px;
+    border-radius: 0px 8px 8px 0px;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchButton:hover{
+    background-color:antiquewhite;
+}
+.marginme{
+    margin: 0 10px;
+}
+
+.menu_icon{
+    display: block;
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+/* HERO */
+.hero{
+    min-height: 200px;
+    /* background: linear-gradient(135deg, rgba(35,76,100, 0.5)50%, rgba(35,76,100, 0.5)50%); */
+    background: linear-gradient(135deg, rgba(35,76,100, 1.0) 49%, white 53%, rgba(183, 133, 86, 1.0)49%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero h1{
+    font-size:50px;
+}
+@media screen and (min-width:600px) {
+    .menu_icon{
+        display: none;
+    }
+
+ 
+    #menu{
+        max-width: 400px;
+        min-width: 100px;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        position: static;
+        background-color: #234C64;
+        right: 0;
+        top: 0;
+    } 
+
+    #menu li{
+        margin: 10px auto;
+        width:fit-content;
+        list-style: none;
+    }
+
+ 
+
+    /* .header li{
+        margin: 10px auto;
+        width:fit-content;
+        list-style: none;
+    }
+
+    .header li a{
+        width:auto;
+    } */
+
+}
+
+
+
+/* MAIN */
+main{
+    display:  flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    justify-content: center;
+    background-color: antiquewhite;
+    text-align: center;
+    
+}
+
+main div{
+    background-color: white;
+    flex-basis: 250px;
+    margin: 20px;
+    min-height: 200px;
+    /* flex-grow: 1; */
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    /* padding: 5px; */
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.3s ease-in-out;  
+}
+
+
+main div p{
+    margin: 5px;
+}
+
+main div span{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(183, 133, 86, 0.5);
+}
+
+main div button{
+    justify-self: center;
+}
+
+main div:hover{
+    transform: scale(1.02);
+}
+
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+main button{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+main button:hover{
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+.footer{
+    min-height: 100px;
+    background: #234C64;
+    color: white;
+    padding: 10px;
+}
+
+.footer div{
+    text-align: center;
+}

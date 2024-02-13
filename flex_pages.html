@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXPAGE</title>
+    <link rel="stylesheet" href="flex_pages.css">
+    <script>
+        
+    </script>
+</head>
+<body onresize="hidemobilemenu()">
+    <header class="header">
+        <nav>
+            <img src="./imgs/desktop4.jpeg" class="logo" alt="Logo">
+
+            <div class="container marginme">
+                <input class="searchBox" type="search" name="search" placeholder="Enter text here...">
+                <button class="searchButton" type="submit" value="search" >
+                    <img class="icon" src="./imgs/magnifying-glass-tilted-left.svg" >
+                </button>
+            </div>
+
+            <ul id="menu" class="menu">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul id="menu2" class="menu2">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <img src="./imgs/menu_icon.png" id="menu_icon" class="menu_icon" alt="menu_icon">
+        </nav>
+        <section class="hero">
+            <h1>MY HERO TITLE</h1>
+        </section>
+    </header>
+    <main>
+
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+        <div>
+            <img src="./imgs/desktop4.jpeg" alt="image">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate.</p>
+            <span>5% off</span>
+            <button>pay now</button>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="copyright">
+            Intellectual Property Protection - Privacy Policy - Sitemap - Terms of Use - User Information Legal Enquiry Guide <br /> ©️ 2020-2024  exampleshop.com. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        // const menu_icon = document.querySelector('#menu_icon')
+        // const menu = document.querySelector('#menu')
+        const menu_icon = document.querySelector('.menu_icon')
+        const menu = document.querySelector('.menu2')
+
+        // menu_icon.addEventListener('click', () => {
+        //     console.log('click')
+
+        //     if (menu.classList.contains('hidden')) {
+        //         console.log('removed hidden class')
+
+        //         menu.classList.remove('hidden')
+        //     } else {
+        //         console.log('added hidden class')
+
+        //         menu.classList.add('hidden')
+        //     }
+        // })
+
+
+
+        menu_icon.addEventListener('click', () => {
+            // keep in mind that this approach directly modifies the style attribute
+            console.log('click')
+
+            if (menu.style.display === 'block') {
+                console.log('display none')
+
+                menu.style.display = 'none'
+            } 
+            // else if() {
+            //     console.log('display lex')
+
+            //     menu.style.display = 'flex'
+            // }
+            else {
+                console.log('display block')
+
+                menu.style.display = 'block'
+            }
+        })
+
+        function hidemobilemenu (){
+            if (menu.style.display === 'block') {
+                console.log('display none')
+                menu.style.display = 'none'
+            } 
+        }
+    </script>
+</body>
+</html>
